@@ -1,4 +1,4 @@
-# A Imperative Leaning (IL) control-variate approach for MTSP
+# An Imperative Leaning (IL) control-variate approach for MTSP
 
 # To get start
 ## Install the dependencies
