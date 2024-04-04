@@ -71,7 +71,6 @@ def train(batch_size, no_nodes, policy_net, surrogate, lr_p, lr_s, no_agent, ite
             validation_result = validate(validation_data, policy_net, no_agent, device)
             wandb.log({'best val so far':validation_result})
             if validation_result < best_so_far:
-                # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 torch.save(policy_net.state_dict(), path)
                 torch.save(surrogate.state_dict(), path_s)
                 print('Found better policy, and the validation result is:', format(validation_result, '.4f'))
@@ -98,8 +97,8 @@ if __name__ == '__main__':
                     key_size_policy=128, val_size=16, clipping=10, dev=dev) 
     surrogate = Surrogate(in_dim=n_nodes-1, out_dim=1, n_hidden=256, nonlin='tanh', dev=dev)
 
-    path = './saved_model/lax_newpolicy_noble_{}_{}.pth'.format(str(n_nodes), str(n_agent))
-    path_s = './saved_surrogate/lax_newpolicy_surrogate_noble_{}_{}.pth'.format(str(n_nodes), str(n_agent))
+    path = './saved_model/iMTSP_{}_{}.pth'.format(str(n_nodes), str(n_agent))
+    path_s = './saved_surrogate/iMTSP_surrogate_{}_{}.pth'.format(str(n_nodes), str(n_agent))
 
     # To resume from a breakpoint with wandb. When resuming, do check hyperparameters like learning rate, best validation results
     if os.path.isfile(path):

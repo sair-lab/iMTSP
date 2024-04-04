@@ -71,7 +71,7 @@ if __name__ == '__main__':
                     key_size_policy=64, val_size=64, clipping=10, dev=dev)
     
     # To resume from a breakpoint with wandb. When resuming, do check hyperparameters like learning rate, best validation results
-    path = './saved_model/{}_{}.pth'.format(str(n_nodes), str(n_agent))
+    path = './saved_model/RL_{}_{}.pth'.format(str(n_nodes), str(n_agent))
     if os.path.isfile(path):
         policy.load_state_dict(torch.load(path, map_location=torch.device(dev)))
         id = '' # This should be the mission id in wandb

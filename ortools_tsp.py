@@ -105,7 +105,6 @@ def my_solve(instance, city_indices):
     """Entry point of the program."""
     # Instantiate the data problem.
     data = create_data_model(instance)
-
     # Create the routing index manager.
     manager = pywrapcp.RoutingIndexManager(len(data['locations']),
                                            data['num_vehicles'], data['depot'])
@@ -143,19 +142,6 @@ def my_solve(instance, city_indices):
         index = solution.Value(routing.NextVar(index))
     plan_output.append(city_indices[manager.IndexToNode(index)])
     # Print solution on console.
-    # if solution:
-    #     print_solution(manager, routing, solution)
+    # print_solution(manager, routing, solution)
 
-    return get_index_cost(plan_output), plan_output, solution.ObjectiveValue()/1000
-
-
-if __name__ == '__main__':
-    import torch
-
-    n_nodes = 5
-
-    instances = torch.rand(size=[n_nodes, 2])  # [batch, nodes, fea]
-
-    cost, plan = my_solve(instances*1000, [0, 3, 6, 7, 8])
-    print(cost)
-    print(plan)
+    return plan_output, solution.ObjectiveValue()/1000
