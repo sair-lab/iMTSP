@@ -1,4 +1,4 @@
-from gin import Net
+from network import Net
 import torch.nn as nn
 import torch.nn.functional as F
 import torch
