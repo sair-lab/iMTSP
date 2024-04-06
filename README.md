@@ -15,3 +15,6 @@ train.py contains the learning-based baseline.
 my_train.py contains the proposed approach.
 # Testing
 test.py
+
+# Models
+Refer to https://github.com/sair-lab/iMTSP/releases/tag/v1.0 for trained allocation networks and corresponding surrogate networks.
