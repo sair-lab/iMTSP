@@ -12,9 +12,6 @@ We also explicitly record the history of gradient variance of iMTSP and the RL b
 
 <img src='imgs/var_hist.png' width=500>
 
-## Paper
-Our paper "iMTSP: Solving Min-Max Multiple Traveling Salesman Problem with Imperative Learning" has been submitted to 2024 International Conference on Intelligent Robots and Systems (IROS) and you can find a pdf [here](https://github.com/sair-lab/iMTSP/files/14891988/iMTSP.1.pdf).
-
 ## To get start
 ### Dependencies
 python == 3.8.15
