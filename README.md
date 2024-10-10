@@ -10,10 +10,10 @@ We formulate the MTSP as a bilevel optimization problem where the upper-level op
 ## Experimental results
 The figures demonstrate the advantages of iMTSP on two specific MTSP instances. We compare iMTSP with a reinforcement learning(RL)-based approach and Google OR-Tools routes module.
 
-<img src='imgs/routes.png' width=500>
+<img src='imgs/routes.png' width='100%'>
 We also explicitly record the history of gradient variance of iMTSP and the RL baseline. Our method converges 20 times faster than the baseline with the help of the surrogate network.
 
-<img src='imgs/var_hist.png' width=500>
+<img src='imgs/var_hist.png' width='60%'>
 
 ## To get start
 ### Dependencies
