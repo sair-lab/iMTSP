@@ -1,6 +1,6 @@
 # iMTSP: Solving Min-Max Multiple Traveling Salesman Problem with Imperative Learning
 
-Yifan Guo, Zhongqiang Ren, Chen Wang. "iMTSP: Solving Min-Max Multiple Traveling Salesman Problem with Imperative Learning," IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024.
+Yifan Guo, Zhongqiang Ren, Chen Wang. "iMTSP: Solving Min-Max Multiple Traveling Salesman Problem with Imperative Learning," IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2024. [Download PDF](https://arxiv.org/abs/2405.00285)
 
 iMTSP is a novel self-supervised framework to solve the multiply traveling salesmen problem (MTSP). By introducing a surrogate network as a control variate, iMTSP can efficiently train the allocation network through the non-differentiable TSP solver and the discrete decision space.
 
